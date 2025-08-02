@@ -1,0 +1,39 @@
+name: Deploy branch
+
+on:
+  push:
+    branches:
+      - main
+      - Task1
+      - Task2
+      - Task3
+      - Task4
+      - Task5
+      - Task6
+      - Task7
+      - Task8
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch code
+        uses: actions/checkout@v4
+
+      # Example Node.js project steps; adjust for your stack
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      # Add your deployment step here
+      # Example (replace with your deployment logic):
+      # - name: Deploy
+      #   run: echo "Deploying branch ${{ github.ref_name }}"
