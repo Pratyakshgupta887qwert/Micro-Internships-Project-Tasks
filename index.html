@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Noah William | Portfolio</title>
+    <style>
+        :root {
+            --primary: #222;
+            --accent: #ff6347;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            --section-bg: rgba(255,255,255,0.97);
+            --shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--bg-gradient);
+            color: var(--primary);
+            scroll-behavior: smooth;
+            font-size: 18px;
+        }
+        nav {
+            background: var(--primary);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        nav ul {
+            margin: 0;
+            padding: 0 5vw;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 70px;
+            list-style: none;
+        }
+        nav li {
+            margin-left: 3vw;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+            padding: 10px 18px;
+            border-radius: 4px;
+        }
+        nav a:hover, nav a.active {
+            color: var(--accent);
+            background: rgba(255,255,255,0.10);
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 92vh;
+            padding-top: 90px;
+            text-align: center;
+        }
+        .hero img {
+            height: 220px;
+            width: 220px;
+            border-radius: 50%;
+            box-shadow: var(--shadow);
+            object-fit: cover;
+            margin-bottom: 24px;
+            border: 5px solid #fff;
+            background: #fff;
+            transition: transform 0.3s;
+        }
+        .hero img:hover {
+            transform: scale(1.07);
+        }
+        .hero h1 {
+            font-size: 2.7em;
+            margin: 0 0 14px 0;
+            color: var(--primary);
+            letter-spacing: 1px;
+        }
+        .hero p {
+            font-size: 1.3em;
+            color: #555;
+            margin: 0 0 22px 0;
+        }
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            margin: 22px 0 0 0;
+        }
+        .social-media a {
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .social-media a:hover {
+            transform: scale(1.18) rotate(-8deg);
+        }
+        .social-media img {
+            height: 48px;
+            width: 48px;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 4vw 0 4vw;
+        }
+        section {
+            background: var(--section-bg);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            margin-bottom: 48px;
+            padding: 40px 38px;
+            transition: box-shadow 0.2s;
+        }
+        section:hover {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+        }
+        section h2 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 2em;
+            letter-spacing: 1px;
+        }
+        section p {
+            font-size: 1.15em;
+            line-height: 1.7;
+        }
+        @media (max-width: 900px) {
+            .hero img {
+                height: 160px;
+                width: 160px;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+            main {
+                padding: 40px 2vw 0 2vw;
+            }
+            section {
+                padding: 28px 14px;
+            }
+            nav ul {
+                padding: 0 2vw;
+            }
+        }
+        @media (max-width: 600px) {
+            nav ul {
+                padding: 0 2vw;
+                height: 56px;
+            }
+            nav li {
+                margin-left: 12px;
+            }
+            nav a {
+                font-size: 1em;
+                padding: 7px 10px;
+            }
+            .hero img {
+                height: 100px;
+                width: 100px;
+            }
+            .hero h1 {
+                font-size: 1.3em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .social-media img {
+                height: 32px;
+                width: 32px;
+            }
+            main {
+                padding: 18px 2vw 0 2vw;
+            }
+            section {
+                padding: 14px 4px;
+            }
+            section h2 {
+                font-size: 1.2em;
+            }
+            section p {
+                font-size: 1em;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero" id="hero">
+            <img src="./PORTFOLIO WEBSITE PROJECT 1/profile-pic-2.png" alt="Henry Noah William">
+            <h1>Henry Noah William</h1>
+            <p>Web Developer | Designer | Tech Enthusiast</p>
+            <div class="social-media">
+                <a href="#"><img src="./PORTFOLIO WEBSITE PROJECT 1/git (1).png" alt="GitHub"></a>
+                <a href="#"><img src="./PORTFOLIO WEBSITE PROJECT 1/facebbok.png" alt="Facebook"></a>
+                <a href="#"><img src="./PORTFOLIO WEBSITE PROJECT 1/inta.png" alt="Instagram"></a>
+                <a href="#"><img src="./PORTFOLIO WEBSITE PROJECT 1/twitter.png" alt="Twitter"></a>
+            </div>
+        </div>
+        <main>
+            <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hi! I'm Henry, a passionate web developer with experience in building modern, responsive websites and web applications. I love turning ideas into reality using code and design.
+            </p>
+            <p>
+                My expertise includes HTML, CSS, JavaScript, and frameworks like React. I enjoy learning new technologies and continuously improving my skills. When I'm not coding, I like exploring UI/UX trends and collaborating on open-source projects.
+            </p>
+            </section>
+            <section id="projects">
+            <h2>Projects</h2>
+            <p>
+                <strong>Portfolio Website:</strong> A personal portfolio to showcase my work. Built with HTML, CSS, and JavaScript, featuring a responsive design and smooth navigation.<br>
+                <strong>Task Manager App:</strong> A simple and intuitive app to manage daily tasks. Includes features like task creation, editing, and completion tracking, built using React.<br>
+                <strong>Blog Platform:</strong> A minimal blog platform for sharing thoughts and tutorials. Supports markdown posts, user authentication, and a clean, mobile-friendly interface.<br>
+                <strong>Weather Dashboard:</strong> A web app that displays real-time weather information using external APIs and dynamic UI updates.<br>
+                <strong>Landing Pages:</strong> Designed and developed several landing pages for startups, focusing on conversion and user engagement.
+            </p>
+            </section>
+            <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                Feel free to reach out via <a href="mailto:henry@example.com">email</a> or connect with me on social media!
+            </p>
+            <ul>
+                <li>Email: <a href="mailto:henry@example.com">henry@example.com</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/henry-noah-william" target="_blank" rel="noopener">linkedin.com/in/henry-noah-william</a></li>
+                <li>GitHub: <a href="https://github.com/henry-noah" target="_blank" rel="noopener">github.com/henry-noah</a></li>
+            </ul>
+            <p>
+                I'm open to freelance opportunities, collaborations, or just a friendly chat about tech!
+            </p>
+            </section>
+        </main>
+        </body>
+        </html>
