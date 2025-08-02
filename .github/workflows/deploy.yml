@@ -21,19 +21,4 @@ jobs:
       - name: Checkout branch code
         uses: actions/checkout@v4
 
-      # Example Node.js project steps; adjust for your stack
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build
-
-      # Add your deployment step here
-      # Example (replace with your deployment logic):
-      # - name: Deploy
-      #   run: echo "Deploying branch ${{ github.ref_name }}"
+      # Add actual deploy steps here if you need (e.g., upload to a server)
